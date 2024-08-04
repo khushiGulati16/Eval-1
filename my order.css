@@ -99,4 +99,22 @@ footer .container {
     background-color: gray;
     border: 2px solid black;
 }
+h1 {
+    color: #343a40;
+    margin-bottom: 20px;
+}
+p{
+    font-weight: 200;
+}
 
+.custom-button {
+    background-color: #007bff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.custom-button:hover {
+    background-color: #0056b3;
+}
