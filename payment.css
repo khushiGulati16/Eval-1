@@ -1,0 +1,26 @@
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    background-image: url(food.jpg)
+}
+
+.card {
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.card-header {
+    background-color: red;
+    color: white;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+}
+
+.btn-primary {
+    background-color: red;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: red;
+}
