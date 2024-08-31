@@ -1,10 +1,13 @@
-*-footer-*/
+/*-footer-*/
 
 ul.social-icon {
     display: flex;
     list-style: none;
     gap: 10px;
     float: right;
+}
+.footer-top .col-md-5 strong {
+    font-size: 28px;
 }
 .footer-top {
     background: #fff7f5;
@@ -15,20 +18,18 @@ ul.social-icon {
     font-size: 16px;
 	 font-family: 'Poppins', sans-serif;
     line-height: 26px;
-	color:#0B154F;
 }
 .footer-top h3 {
     font-size: 24px;
     font-weight: 700;
     line-height: 28px;
     margin-bottom: 15px;
-    color: #003F5D;
 }
 .footer-top strong {
     color: #f60002;
 }
 .footer-top ul li a {
-    color:#0B154F;
+    color:#000;
 }
 .footer-top ul {
     list-style: none;
