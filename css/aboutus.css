@@ -1,0 +1,31 @@
+/*-fonts-*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500&display=swap');
+/*-fonts-*/
+
+/*-aboutuspage-*/
+.tittle {
+    background: #fff7f5 !important;
+    padding: 40px 25px;
+}
+.tittle h2 {
+    text-align: center;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+.tittle {
+    background: #fff7f5;
+    padding: 100px 0;
+}
+.about-us-page .row {
+    align-items: center;
+}
+.about-us-page {
+    padding: 80px 0;
+}
+.about-us-page strong {
+    color: #f60002;
+}
+.about-us-page .col-md-5 img {
+    width: 100%;
+}
+/*-aboutuspage-*/
