@@ -1,3 +1,8 @@
+@media screen and (max-width: 800px) {
+    .left, .main, .right {
+      width: 100%; 
+    }
+  }
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -119,7 +124,10 @@ body {
     cursor: pointer;
     margin-bottom: 20px;
 }
-
+.back-btn a{
+    text-decoration: none;
+    color: white;
+}
 .map {
     background-color: #ffcccc;
     height: 200px;
@@ -166,7 +174,7 @@ body {
 
 
 .confirm-btn, .back-btn {
-    background-color: #007bff;
+    background-color: #fd0301;
     color: white;
     
     border: none;
@@ -180,3 +188,7 @@ body {
     background-color: red;
     color: white;
 }
+
+
+
+    
