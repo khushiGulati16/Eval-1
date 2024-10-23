@@ -59,7 +59,11 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
-      </div><center>
+      </div>
+      <div class="container mt-4">
+        <input type="text" id="searchInput" class="form-control" placeholder="Search menu items..." onkeyup="searchMenu()">
+      </div>
+      <center>
       <h1>Explore Our Menu</h1>
       <p>Choose from a diverse menu featuring a delectable array of dishes.Our mission is to satisfy your<br>
       cravings and elevate your dining experience , one delicious meal of a time.</p>
@@ -146,7 +150,115 @@
   <h4>Fries</h4>
   <p>Price: ₹250</p>
   <button class="add-to-cart" data-name="Chilli garlic noodle" data-price="250">Add to Cart</button>
-</div></div>
+</div></div><br><br>
+<div class="menu-container">
+  <div class="menu-item">
+    <h4>Sandwich</h4>
+    <p>Price: ₹200</p>
+    <button class="add-to-cart" data-name="sandwich" data-price="200">Add to Cart</button>
+  </div>
+  
+  <div class="menu-item">
+    <h4>Pasta</h4>
+    <p>Price: ₹350</p>
+    <button class="add-to-cart" data-name="Pasta" data-price="350">Add to Cart</button>
+  </div>
+  
+  <div class="menu-item">
+    <h4>Burger</h4>
+    <p>Price: ₹150</p>
+    <button class="add-to-cart" data-name="Burger" data-price="150">Add to Cart</button>
+  </div>
+  
+  <div class="menu-item">
+    <h4>Cake</h4>
+    <p>Price: ₹500</p>
+    <button class="add-to-cart" data-name="Cake" data-price="500">Add to Cart</button>
+  </div>
+  <div class="menu-item">
+    <h4>Noodle</h4>
+    <p>Price: ₹320</p>
+    <button class="add-to-cart" data-name="Noodle" data-price="320">Add to Cart</button>
+  </div>
+  <div class="menu-item">
+    <h4>Pizza</h4>
+    <p>Price: ₹749</p>
+    <button class="add-to-cart" data-name="Pizza" data-price="749">Add to Cart</button>
+  </div>
+  <div class="menu-item">
+    <h4>Momos</h4>
+    <p>Price: ₹140</p>
+    <button class="add-to-cart" data-name="Momos" data-price="140">Add to Cart</button>
+  </div>
+  <div class="menu-item">
+    <h4>Taco</h4>
+    <p>Price: ₹210</p>
+    <button class="add-to-cart" data-name="Fried Momos" data-price="210">Add to Cart</button>
+  </div>
+  <div class="menu-item">
+    <h4>Pastry</h4>
+    <p>Price: ₹80</p>
+    <button class="add-to-cart" data-name="Pastry" data-price="80">Add to Cart</button>
+  </div>
+  <div class="menu-item">
+    <h4>Fries</h4>
+    <p>Price: ₹250</p>
+    <button class="add-to-cart" data-name="Chilli garlic noodle" data-price="250">Add to Cart</button>
+  </div></div><br><br>
+  <div class="menu-container">
+    <div class="menu-item">
+      <h4>Sandwich</h4>
+      <p>Price: ₹200</p>
+      <button class="add-to-cart" data-name="sandwich" data-price="200">Add to Cart</button>
+    </div>
+    
+    <div class="menu-item">
+      <h4>Pasta</h4>
+      <p>Price: ₹350</p>
+      <button class="add-to-cart" data-name="Pasta" data-price="350">Add to Cart</button>
+    </div>
+    
+    <div class="menu-item">
+      <h4>Burger</h4>
+      <p>Price: ₹150</p>
+      <button class="add-to-cart" data-name="Burger" data-price="150">Add to Cart</button>
+    </div>
+    
+    <div class="menu-item">
+      <h4>Cake</h4>
+      <p>Price: ₹500</p>
+      <button class="add-to-cart" data-name="Cake" data-price="500">Add to Cart</button>
+    </div>
+    <div class="menu-item">
+      <h4>Noodle</h4>
+      <p>Price: ₹320</p>
+      <button class="add-to-cart" data-name="Noodle" data-price="320">Add to Cart</button>
+    </div>
+    <div class="menu-item">
+      <h4>Pizza</h4>
+      <p>Price: ₹749</p>
+      <button class="add-to-cart" data-name="Pizza" data-price="749">Add to Cart</button>
+    </div>
+    <div class="menu-item">
+      <h4>Momos</h4>
+      <p>Price: ₹140</p>
+      <button class="add-to-cart" data-name="Momos" data-price="140">Add to Cart</button>
+    </div>
+    <div class="menu-item">
+      <h4>Taco</h4>
+      <p>Price: ₹210</p>
+      <button class="add-to-cart" data-name="Fried Momos" data-price="210">Add to Cart</button>
+    </div>
+    <div class="menu-item">
+      <h4>Pastry</h4>
+      <p>Price: ₹80</p>
+      <button class="add-to-cart" data-name="Pastry" data-price="80">Add to Cart</button>
+    </div>
+    <div class="menu-item">
+      <h4>Fries</h4>
+      <p>Price: ₹250</p>
+      <button class="add-to-cart" data-name="Chilli garlic noodle" data-price="250">Add to Cart</button>
+    </div></div>
 
 
 <center>
@@ -184,37 +296,50 @@
 
 <script>
   
+  
   let cartItems = [];
 
-  
   function updateCart() {
     const cartList = document.querySelector('.list-group');
     cartList.innerHTML = ''; 
-    
-    cartItems.forEach(item => {
+
+    cartItems.forEach((item, index) => {
       const cartItemHTML = `
         <li class="list-group-item d-flex justify-content-between">
           <div>
             <h6>${item.name} <small>(Quantity: ${item.quantity})</small></h6>
           </div>
-          <span>₹${item.price * item.quantity}</span>
+          <div>
+            <span>₹${item.price * item.quantity}</span>
+            <button class="btn btn-danger btn-sm remove-from-cart" data-index="${index}">Remove</button>
+          </div>
         </li>
       `;
       cartList.insertAdjacentHTML('beforeend', cartItemHTML);
     });
 
-    
     const totalPrice = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
     document.getElementById('total-price').innerText = `₹${totalPrice}`;
+
+    
+    document.querySelectorAll('.remove-from-cart').forEach(button => {
+      button.addEventListener('click', () => {
+        const itemIndex = button.getAttribute('data-index');
+        removeFromCart(itemIndex);
+      });
+    });
   }
 
-  
+  function removeFromCart(index) {
+    cartItems.splice(index, 1); 
+    updateCart(); 
+  }
+
   document.querySelectorAll('.add-to-cart').forEach(button => {
     button.addEventListener('click', () => {
       const itemName = button.getAttribute('data-name');
       const itemPrice = parseInt(button.getAttribute('data-price'));
 
-      
       const existingItem = cartItems.find(item => item.name === itemName);
 
       if (existingItem) {
@@ -226,7 +351,12 @@
       updateCart(); 
     });
   });
+
+  
+  updateCart();
 </script>
+
+
 
 </center>
 <section id="menu">
@@ -317,12 +447,12 @@
               <li><img src="insta-removebg-preview.png" width="50px" height="25px"></li>
               <li><img src="twitter-removebg-preview.png" width="50px" height="25px"></li>
               <li><img src="facebook-removebg-preview.png" width="50px" height="30px"></li>
-           </ul>
+            </ul>
           </div>
       </div>
   </div>
 </div><script src="menu.js"></script>
+ 
 
-
-    </body>
+     </body>
 </html>
